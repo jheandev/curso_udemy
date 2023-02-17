@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>logoca de programação javascript</title>
+    </head>
+    <body>
+        <h1>logoca de programação javascript</h1>
+    </body>
+
+<script>
+//fazer jogador1 digitar um numero 
+
+var n1 = prompt('digite um numero')
+
+n1 = parseInt(n1);
+
+//fazer jogador2 digitar outro numero 
+
+var n2 = prompt('digite outro numero')
+
+n2 = parseInt(n2);
+
+//se forem iguais, mostrar mesnagem 'empate'
+
+if (n1 === n2){
+    alert('voces empataram');
+   
+} else {
+
+
+
+//sortear um numero entre 0 e 1
+
+var nSorteado = parseInt(Math.random() * 2);
+
+// se o numero sorteado for 0, ganha quem escolher o numero MENOR
+if(nSorteado === 0){
+
+
+if(n1 < n2){
+    alert('ganhou o jogador 1');
+} else {
+    alert('ganhou o jogador 2');
+}
+
+//se o numero sorteado fpr 1, ganha quem escolher o numero MAIOR 
+
+} else{
+    if(n1 > n2){
+        alert('ganhou o jogador 1');
+
+    } else {
+        alert('ganhou o jogador 2')
+    }
+
+}
+
+
+}
+
+
+
+</script>
+</html>

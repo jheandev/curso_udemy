@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2008</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Curso Javascript Completo 2008</h1>
+
+
+      <input type="text" id="txtNome">
+      <button onclick="escreve()">Só clica</button>
+      <div id="msg"></div>
+
+
+      <script>
+    
+ 
+  
+    var txtNome2 = document.querySelector('#txtNome'); //selecionar input
+
+    function escreve(){
+    var nome = txtNome2.value;
+    document.querySelector('#msg').innerHTML = "Bem-vindo, <b>" + nome + "</b>";
+    //escrito em negrito
+    }
+
+      </script>
+
+    </body>
+</html>
