@@ -23,11 +23,11 @@
                 <thead>
                     <tr>
                         <th>Nome</th>                       
-                        <th>Nome</th>
-                        <th>Nome</th>
-                        <th>Nome</th>
-                        <th>Nome</th>
-                        <th>Nome</th>
+                        <th>Nota1</th>
+                        <th>Nota2</th>
+                        <th>Nota3</th>
+                        <th>Nota4</th>
+                        <th>Media</th>
                     </tr>
                 </thead>
                 
@@ -52,7 +52,7 @@
 
                     <tr class="aluno">
                         <td class="aluno-nome">Jessilda</td>
-                        <td class="aluno-n1">8</td>
+                        <td class="aluno-n1">0</td>
                         <td class="aluno-n2">8.5</td>
                         <td class="aluno-n3">7</td>
                         <td class="aluno-n4">7.5</td>
@@ -97,10 +97,21 @@
           var linhaAluno = trs[x];
           var tds = linhaAluno.querySelectorAll('td');
           var notas = recuperarNumerosDeColunas(tds);
-          media = calcularMedia.apply(this, notas);
 
+     
 
-          linhaAluno.querySelector('.aluno-m').textContent = media;
+         //var temZero = notas.some(function(nota){
+                 //return nota === 0;
+
+        // });
+
+         var temZero = notas.some( nota => nota === 0 );
+         
+
+         var mensagem = temZero ? 'reprovado' : 
+         calcularMedia.apply(this, notas);   
+
+          linhaAluno.querySelector('.aluno-m').textContent = mensagem;
             x++;
         }
 

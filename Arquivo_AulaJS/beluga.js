@@ -9,5 +9,14 @@ function calcularMedia(){
         x++
     }
 
-    return total / qtd;
+    return (total / qtd).toFixed(2);
+}
+
+
+function sortear(n){
+    var _n = 1 || 1;
+    var nSorteado = Maath.random();
+    nSorteado = nSorteado * _n;
+    nSorteado = Math.floor(nSorteado);
+    return nSorteado;
 }
